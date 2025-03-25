@@ -1,0 +1,69 @@
+.App {
+  /* background-image: url("/images/background.png"); */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: space-between; /* Character on left, clothes on right */
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  gap: 20px; /* Reduced gap between character and clothing */
+}
+
+.character-container {
+  position: relative;
+  width: 320px;
+}
+
+.character {
+  width: 100%;
+}
+
+/* Clothing container: Use grid to display clothes in 3 rows and 3 columns */
+.clothing-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Create 3 equal columns */
+  width: 500px; /* Set a fixed width to the clothing container */
+}
+
+.clothing-item {
+  cursor: pointer;
+  width: 600px; /* Adjust width for clothing items */
+  height: auto;
+}
+
+/* Outfit item that is being dragged */
+.outfit-item {
+  position: absolute;
+  width: 100%; /* Adjust width to fit your clothing items */
+}
+
+/* Positioning for specific items */
+.hair {
+  top: -90px;  /* Moved further up to be closer to the character's head */
+  left: -38px;  /* Adjust left for better centering */
+}
+
+.face {
+  top: -24px;  /* Move face closer to the head (above the horse's body) */
+  left: -10px;  /* Adjust left for better centering */
+}
+
+.shirt {
+  top: 120px; /* Shirt stays at the same position */
+  left: 50px;
+}
+
+/* Optional: Add z-index to control which item is in front */
+.hair {
+  z-index: 1;
+}
+
+.face {
+  z-index: 2;
+}
+
+.shirt {
+  z-index: 3;
+}
