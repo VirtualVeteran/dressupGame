@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh; /* Full screen height */
-  background-color: #f0f0f0;
+
 }
 
 /* Character container */
@@ -69,3 +69,24 @@
 .faces-container img:hover {
   transform: scale(1.1);
 }
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(45deg, #ffb6b9, #ffdfba, #d1e8e2, #a2dff7, #b8a9c9);
+  background-size: 200% 200%;  /* Reduced background size */
+  animation: gradientAnimation 8s ease infinite;
+  overflow: hidden;  /* Prevent overflow */
+}
+
+@keyframes gradientAnimation {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
