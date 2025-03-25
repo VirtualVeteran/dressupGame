@@ -1,14 +1,18 @@
 import React, { useState } from "react";
 import Character from "../Components/Character";
-import Clothes from "../Components/Clothes";
+import Faces from "../Components/Faces";  
+import Bodies from "../Components/Body";  
 
 const Game = () => {
-  const [outfit, setOutfit] = useState({});
+  const [outfit, setOutfit] = useState({
+    body: null,
+    face: null,
+  });
 
-  const handleSelectClothing = (type, image) => {
+  const handleSelectItem = (type, image) => {
     setOutfit((prevOutfit) => ({
       ...prevOutfit,
-      [type]: image,  // Dynamically add the item based on its type (hair, face, shirt)
+      [type]: image,  // Ensure body and face don't overwrite each other
     }));
   };
 
@@ -21,15 +25,15 @@ const Game = () => {
 
       {/* Clothing Items on the Right */}
       <div className="clothing-container">
-        <Clothes image="/images/black Cape.png" type="shirt" onSelect={handleSelectClothing} />
-        <Clothes image="/images/Purple Cape.png" type="shirt" onSelect={handleSelectClothing} />
-        <Clothes image="/images/red Cape.png" type="shirt" onSelect={handleSelectClothing} />
-        <Clothes image="/images/blond hair (1).png" type="hair" onSelect={handleSelectClothing} />
-        <Clothes image="/images/brown hair.png" type="hair" onSelect={handleSelectClothing} />
-        <Clothes image="/images/flower crown.png" type="hair" onSelect={handleSelectClothing} />
-        <Clothes image="/images/face 1.png" type="face" onSelect={handleSelectClothing} />
-        <Clothes image="/images/face 2.png" type="face" onSelect={handleSelectClothing} />
-        <Clothes image="/images/face 3.png" type="face" onSelect={handleSelectClothing} />
+        <Bodies image="/images/body 1.png" type="body" onSelect={handleSelectItem} />
+        <Bodies image="/images/body 2.png" type="body" onSelect={handleSelectItem} />
+        <Bodies image="/images/body 3.png" type="body" onSelect={handleSelectItem} />
+        <Bodies image="/images/body 4.png" type="body" onSelect={handleSelectItem} />
+        <Bodies image="/images/head 1.png" type="face" onSelect={handleSelectItem} />
+        <Faces image="/images/head 2.png" type="face" onSelect={handleSelectItem} />
+        <Faces image="/images/head 3.png" type="face" onSelect={handleSelectItem} />
+        <Faces image="/images/head 4.png" type="face" onSelect={handleSelectItem} />
+        <Faces image="/images/head 5.png" type="face" onSelect={handleSelectItem} />
       </div>
     </div>
   );

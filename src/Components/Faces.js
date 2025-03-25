@@ -1,14 +1,14 @@
-const Clothes = ({ image, type, onSelect }) => {
+const Faces = ({ image, type, onSelect }) => {
   const handleDragStart = (event) => {
-    event.dataTransfer.setData("clothingType", type);
-    event.dataTransfer.setData("clothingImage", image);
+    event.dataTransfer.setData("faceType", type);
+    event.dataTransfer.setData("faceImage", image);
   };
 
   return (
     <img
       src={image}
       alt={type}
-      className="clothing-item"
+      className="face-item"
       draggable="true"
       onDragStart={handleDragStart}
       onClick={() => onSelect(type, image)} // Clicking also selects the item
@@ -16,4 +16,4 @@ const Clothes = ({ image, type, onSelect }) => {
   );
 };
 
-export default Clothes;
+export default Faces;
