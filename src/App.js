@@ -5,7 +5,9 @@ import './CSS/App.css';
 const App = () => {
   return (
     <div>
-      <h1>Dress-Up Game</h1>
+     <div class="App">
+    <h1 class="game-title">Dress-Up Game</h1>
+    </div>
       <Game />
     </div>
   );

@@ -30,7 +30,7 @@ const Game = () => {
         <Bodies image="/images/body 3.png" type="body" onSelect={handleSelectItem} />
         <Bodies image="/images/body 4.png" type="body" onSelect={handleSelectItem} />
         <Bodies image="/images/head 1.png" type="face" onSelect={handleSelectItem} />
-        <Faces image="/images/head 2.png" type="face" onSelect={handleSelectItem} />
+        {/* <Faces image="/images/head 2.png" type="face" onSelect={handleSelectItem} /> */}
         <Faces image="/images/head 3.png" type="face" onSelect={handleSelectItem} />
         <Faces image="/images/head 4.png" type="face" onSelect={handleSelectItem} />
         <Faces image="/images/head 5.png" type="face" onSelect={handleSelectItem} />
